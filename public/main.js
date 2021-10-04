@@ -37,6 +37,7 @@ function fireSocketSend(){
         messagesSection.appendChild(newMsgDiv);
         finalMsgDiv = document.getElementById(time);
         finalMsgDiv.style.marginLeft = window.screen.width- finalMsgDiv.clientWidth -40 +"px";
+        window.scrollTo(0,document.body.scrollHeight);
     }
     input.value = "";
 }
@@ -52,4 +53,5 @@ socket.on("newMsg",(data)=>{
     newMsgDiv.appendChild(newMsgP);
     newMsgDiv.appendChild(newMsgDiv_time);
     messagesSection.appendChild(newMsgDiv);
+    window.scrollTo(0,document.body.scrollHeight);
 })
